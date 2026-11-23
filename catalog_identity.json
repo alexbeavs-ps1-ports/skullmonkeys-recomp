@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Skullmonkeys",
+    "id": "SLES-01090",
+    "boot_exe": "SLES_010.90"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Skullmonkeys (Europe).cue",
+    "bin_name": "Skullmonkeys (Europe).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 657750912,
+      "md5": "731b214126782bd1f54d8eddd059a41b",
+      "sha1": "f1784285c7a673e910f7c09bca81100af586ba4c",
+      "crc32": "ded18199"
+    },
+    "disc_fp": "3654eb537f7b1008313ffcc2a08346f9b366fc963b613012a66144a25d517236"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x8008E638",
+    "text_size": "0x00096800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 835,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

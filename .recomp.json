@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Skullmonkeys",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "skullmonkeys-recomp",
+  "original": {
+    "region": "Europe",
+    "serial": "SLES-01090"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "skullmonkeys-psx",
+  "name": "Skullmonkeys",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "skullmonkeys-recomp",
+  "rom_identity": {
+    "crc32": [
+      "ded18199"
+    ],
+    "md5": [
+      "731b214126782bd1f54d8eddd059a41b"
+    ],
+    "sha1": [
+      "f1784285c7a673e910f7c09bca81100af586ba4c"
+    ],
+    "disc_serials": [
+      "SLES-01090"
+    ],
+    "sizes": [
+      657750912
+    ],
+    "filenames": [
+      "Skullmonkeys (Europe).cue",
+      "Skullmonkeys (Europe).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "3654eb537f7b1008313ffcc2a08346f9b366fc963b613012a66144a25d517236"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH5552.BIN",
+    "profile": "SCPH5552",
+    "crc32": [
+      "d786f0b9"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5552.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/skullmonkeys-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "skullmonkeys-*-windows-x64.zip",
+      "linux-x64": "skullmonkeys-*-linux-x64.zip",
+      "macos-arm64": "skullmonkeys-*-macos-arm64.zip",
+      "macos-x64": "skullmonkeys-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "skullmonkeys.exe",
+    "linux": "skullmonkeys",
+    "macos": "skullmonkeys"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/skullmonkeys-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

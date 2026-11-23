@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Skullmonkeys"
+id = "SLES-01090"
+players = 1
+exe = "disc/SLES_010.90"
+disc = "disc/Skullmonkeys (Europe).cue"
+discs = ["disc/Skullmonkeys (Europe).cue"]
+disc_serials = ["SLES-01090"]
+load_address = "0x80010000"
+entry_pc = "0x8008E638"
+text_size = "0x00096800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Skullmonkeys (Europe).bin"
+cue_name = "Skullmonkeys (Europe).cue"
+boot_exe = "SLES_010.90"
+known_sizes = [657750912]
+known_md5 = [
+  "731b214126782bd1f54d8eddd059a41b",
+]
+known_sha1 = [
+  "f1784285c7a673e910f7c09bca81100af586ba4c",
+]
+known_crc32 = [
+  "ded18199",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Skullmonkeys Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "3654eb537f7b1008313ffcc2a08346f9b366fc963b613012a66144a25d517236"
